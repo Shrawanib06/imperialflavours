@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="booking.css">
+    <title>Imperial Flavors</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Imperial Flavors</div>
+            <div class="sidebar">
+                <li onclick="hideSidebar()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="27px"
+                        height="27px">
+                        <path fill="#02101e"
+                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                    </svg></li>
+                <a href="./index.html">Home</a>
+                <a href="./menu.html">Menu</a>
+                <a href="./order.html">Order Online</a>
+                <a href="./booking.html" id="default">Reservations</a>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="./index.html" class="hideOnMobile">Home</a></li>
+                    <li><a href="./menu.html" class="hideOnMobile">Menu</a></li>
+                    <li><a href="./order.html" class="hideOnMobile">Order Online</a></li>
+                    <li><a href="./booking.html" class="hideOnMobile" id="default">Reservations</a></li>
+                </ul>
+            </div>
+            <div class="cart">
+                <div class="cart-heading">
+                    <h3>My Cart</h3>
+                    <li onclick="hideCart()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+                                width="27px" height="27px">
+                                <path fill="#02101e"
+                                    d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                            </svg></a></li>
+                </div>
+                <div class="cart-menu">
+                    <div class="cart-items"></div>
+                </div>
+                <div class="sidebar--footer">
+                    <div class="total--amount">
+                        <h5>Total</h5>
+                        <div class="cart-total">RS. 0.00</div>
+                    </div>
+                    <button class="checkout-btn" onclick="showCheckOut()">Checkout</button>
+                </div>
+            </div>
+            <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512" width="27px" height="27px">
+                        <path fill="#ffffff"
+                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                    </svg></a></li>
+            <li class="cart-button" onclick="showCart()">
+                <a href="#">
+                    <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                    <span class="quantity">0</span>
+                </a>
+            </li>
+        </nav>
+    </header>
+
+
+    <div class="checkOut hidden">
+        <div class="container">
+            <div class="checkoutLayout">
+                <div class="returnCart">
+                    <h1>Order Summary</h1>
+                    <div class="return">
+                        <div id="orderSummary">
+                            <!-- Order summary items will be populated here -->
+                        </div>
+                        <hr class="custom-hr">
+                        <div class="row">
+                            <div>Total Quantity:</div>
+                            <div class="totalQuantity">0</div>
+                        </div>
+                        <div class="row">
+                            <div>Total Price:</div>
+                            <div class="totalPrice">0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h1>Checkout</h1>
+                    <div class="form">
+                        <div class="group">
+                            <input type="text" placeholder="Full Name" id="fullName" required>
+                        </div>
+                        <div class="group">
+                            <input type="text" placeholder="Phone Number" id="phoneNumber" required>
+                        </div>
+                        <div class="group">
+                            <input type="email" id="email" placeholder="Email Address (Optional)">
+                        </div>
+                        <div class="group">
+                            <input type="text" placeholder="Delivery Address" id="address" required>
+                        </div>
+                        <div class="group">
+                            <input type="text" placeholder="Special Instructions (Optional)" id="instructions">
+                        </div>
+                        <div class="group">
+                            <label for="paymentMethod">Payment Method</label>
+                            <select id="paymentMethod" required onchange="togglePaymentMethod()">
+                                <option value="paypal">PayPal</option>
+                                <option value="creditCard">Credit Card</option>
+                                <option value="cashOnDelivery">Cash on Delivery</option>
+                            </select>
+                        </div>
+                        <button type="button" class="orderbtn" onclick="openPopup('orderPopup')">Place Order</button>
+                    </div>
+
+                    <div class="creditCardDetails hidden">
+                        <div class="group">
+                            <label for="paymentMethod">Payment Method</label>
+                            <select id="paymentMethod" required>
+                                <option value="creditCard">Credit Card</option>
+                                <option value="paypal">PayPal</option>
+                                <option value="cashOnDelivery">Cash on Delivery</option>
+                            </select>
+                        </div>
+                        <div class="group">
+                            <input type="text" placeholder="Owner name" id="owner" required>
+                        </div>
+                        <div class="group">
+                            <input type="text" placeholder="Card Number" id="cardNumber" required>
+                        </div>
+                        <div class="group" id="exp">
+                            <span>Exp Date</span>
+                            <select id="month" required>
+                                <option value="mm">mm</option>
+                                <option value="Jan">Jan</option>
+                                <option value="Feb">Feb</option>
+                                <option value="Mar">Mar</option>
+                                <option value="Apr">Apr</option>
+                                <option value="May">May</option>
+                                <option value="Jun">Jun</option>
+                                <option value="Jul">Jul</option>
+                                <option value="Aug">Aug</option>
+                                <option value="Sep">Sep</option>
+                                <option value="Oct">Oct</option>
+                                <option value="Nov">Nov</option>
+                                <option value="Dec">Dec</option>
+                            </select>
+                            <select id="year" required>
+                                <option value="yy">yy</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                                <option value="2031">2031</option>
+                                <option value="2032">2032</option>
+                                <option value="2033">2033</option>
+                                <option value="2034">2034</option>
+                                <option value="2035">2035</option>
+                            </select>
+                        </div>
+                        <div class="group">
+                            <input type="password" placeholder="CVV" id="cvv" required>
+                        </div>
+                        <button type="button" class="orderbtn" onclick="openPopup('orderPopup')">Place Order</button>
+                    </div>
+
+                    <div class="popup" id="orderPopup">
+                        <h2>Thank you!</h2>
+                        <p>We appreciate your order from Imperial Flavors! Enjoy your meal.</p>
+                        <button type="button" onclick="closePopup('orderPopup')">OK</button>
+                    </div>
+
+                </div>
+                <li class="close-btn" onclick="hideCheckOut()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 384 512" width="27px" height="27px">
+                            <path fill="#02101e"
+                                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                        </svg></a></li>
+            </div>
+        </div>
+    </div>
+
+    <div class="booking">
+        <div class="heading">Make a Reservation</div>
+    </div>
+
+    <section class="booking-details">
+        <p class="text">Thank you for choosing Imperial Flavors for your dining experience! To ensure we provide you
+            with the best
+            service, please fill out the reservation form below. For any urgent inquiries or assistance, feel free to
+            contact us directly at (123) 456-7890 or email us at info@imperialflavors.com. We look forward
+            to welcoming you!</p>
+        <form action="#" onsubmit="event.preventDefault(); openReserve('reserve');">
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Full name" class="item" autocomplete="off">
+                </div>
+
+                <div class="input-field field">
+                    <input type="email" placeholder="Email address" class="item" autocomplete="off">
+                </div>
+
+                <div class="input-field field">
+                    <input type="text" placeholder="Phone Number" class="item" autocomplete="off">
+                </div>
+
+                <div class="input-field field">
+                    <input type="date" placeholder="Preferred Date" class="item" autocomplete="off">
+                </div>
+
+                <div class="input-field field">
+                    <input type="time" placeholder="Preferred Time" class="item" autocomplete="off">
+                </div>
+
+                <div class="input-field field">
+                    <input type="number" placeholder="Number of Guests" class="item" autocomplete="off">
+                </div>
+
+                <div class="input-field field">
+                    <input type="text" placeholder="Special Requests" class="item" autocomplete="off">
+                </div>
+
+                <button type="submit" class="btn">Reserve now</button>
+            </div>
+        </form>
+    </section>
+
+    <div class="reserve hidden" id="reserve">
+        <h2>Thank you!</h2>
+        <p>We appreciate your reservation at Imperial Flavors! Enjoy your meal.</p>
+        <button type="button" onclick="closeReserve('reserve')" class="reserve-btn">OK</button>
+    </div>
+
+    <footer>
+        <div class="foot-panel1">
+            Back to Top
+        </div>
+
+        <div class="foot-panel2">
+            <ul>
+                <p>Contact Information<a></a></p>
+                <a>Imperial Flavors</a>
+                <a>123 Culinary Street, Gourmet City, 45678</a>
+                <a>Phone: (123) 456-7890</a>
+                <a>Email: info@imperialflavors.com</a>
+            </ul>
+
+            <ul>
+                <p>Opening Hours<a></a></p>
+                <a>Monday - Friday: 11:00 AM - 10:00 PM</a>
+                <a>Saturday - Sunday: 11:00 AM - 11:00 PM</a>
+            </ul>
+
+            <ul>
+                <p>Quick Links<a></a></p>
+                <a>Home</a>
+                <a>About Us</a>
+                <a>Menu</a>
+                <a>Reserve Your Table</a>
+                <a>Contact Us</a>
+                <a>Privacy Policy</a>
+                <a>Terms of Service</a>
+            </ul>
+
+            <ul>
+                <p>Social Media Links<a></a></p>
+                <a>Facebook</a>
+                <a>Instagram</a>
+                <a>Twitter</a>
+                <a>LinkedIn</a>
+            </ul>
+        </div>
+
+        <div class="foot-panel3">
+            <div class="copyright">
+                © 2024 Imperial Flavors. All rights reserved.
+            </div>
+            <div class="branding">
+                Designed by Shrawani Bhambare
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+             const cartItemsContainer = document.querySelector('.cart-items');
+             const cartTotalElement = document.querySelector('.cart-total');
+             const cartQuantityElement = document.querySelector('.quantity');
+             let cart = JSON.parse(localStorage.getItem('cart')) || [];
+             let total = parseFloat(localStorage.getItem('total')) || 0;
+ 
+             function updateCart() {
+                 cartItemsContainer.innerHTML = '';
+                 cart.forEach((item, index) => {
+                     const itemElement = document.createElement('div');
+                     itemElement.className = 'cart-item';
+                     itemElement.innerHTML = `
+                 <span>${item.name} - Rs. ${item.price} x </span>
+                 <input type="number" class="item-quantity" data-index="${index}" value="${item.quantity}" min="1">
+                 <button class="delete-item" data-index="${index}">Delete</button>
+             `;
+                     cartItemsContainer.appendChild(itemElement);
+                 });
+                 cartTotalElement.textContent = `Rs. ${total.toFixed(2)}`;
+                 cartQuantityElement.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+ 
+                 // Save cart to localStorage
+                 localStorage.setItem('cart', JSON.stringify(cart));
+                 localStorage.setItem('total', total.toFixed(2));
+ 
+                 // Add event listeners for delete buttons
+                 document.querySelectorAll('.delete-item').forEach(button => {
+                     button.addEventListener('click', function () {
+                         const itemIndex = parseInt(this.getAttribute('data-index'));
+                         const item = cart[itemIndex];
+                         total -= item.price * item.quantity;
+                         cart.splice(itemIndex, 1);
+                         updateCart();
+                     });
+                 });
+ 
+                 // Add event listeners for quantity inputs
+                 document.querySelectorAll('.item-quantity').forEach(input => {
+                     input.addEventListener('change', function () {
+                         const itemIndex = parseInt(this.getAttribute('data-index'));
+                         const item = cart[itemIndex];
+                         const newQuantity = parseInt(this.value);
+                         total += item.price * (newQuantity - item.quantity);
+                         item.quantity = newQuantity;
+                         updateCart();
+                     });
+                 });
+             }
+ 
+             function addToCart(button) {
+                 const boxContent = button.closest('.box-content, .food-item');
+                 const itemName = boxContent.querySelector('h2').textContent;
+                 const itemPrice = parseFloat(boxContent.querySelector('.item-price').textContent.replace('Rs. ', ''));
+ 
+                 const existingItem = cart.find(item => item.name === itemName);
+                 if (existingItem) {
+                     existingItem.quantity++;
+                 } else {
+                     cart.push({ name: itemName, price: itemPrice, quantity: 1 });
+                 }
+                 total += itemPrice;
+                 updateCart();
+             }
+ 
+             document.querySelectorAll('.menu-container .add-to-cart, .containerswipe .add-to-cart').forEach(button => {
+                 button.addEventListener('click', function () {
+                     addToCart(this);
+                 });
+             });
+ 
+             // Initial cart update on page load
+             updateCart();
+         });
+ 
+     </script>
+ 
+     <script>
+         function showSidebar() {
+             const sidebar = document.querySelector('.sidebar');
+             sidebar.style.display = 'flex';
+             sidebar.style.zIndex = 1;
+ 
+             const containerswipes = document.querySelectorAll('.containerswipe');
+             containerswipes.forEach(container => {
+                 container.style.zIndex = -1;
+             });
+ 
+             const containerswipes2 = document.querySelectorAll('.containerswipe2');
+             containerswipes2.forEach(container => {
+                 container.style.zIndex = -1;
+             });
+ 
+             const foodItems = document.querySelectorAll('.food-item');
+             foodItems.forEach(item => {
+                 item.style.zIndex = -1;
+             });
+         }
+ 
+         function showCart() {
+             const cart = document.querySelector('.cart')
+             cart.style.display = 'flex'
+             cart.style.zIndex = 1;
+ 
+             const containerswipes = document.querySelectorAll('.containerswipe');
+             containerswipes.forEach(container => {
+                 container.style.zIndex = -1;
+             });
+ 
+             const containerswipes2 = document.querySelectorAll('.containerswipe2');
+             containerswipes2.forEach(container => {
+                 container.style.zIndex = -1;
+             });
+ 
+             const foodItems = document.querySelectorAll('.food-item');
+             foodItems.forEach(item => {
+                 item.style.zIndex = -1;
+             });
+         }
+ 
+         function hideSidebar() {
+             const sidebar = document.querySelector('.sidebar');
+             sidebar.style.display = 'none';
+ 
+             const containerswipes = document.querySelectorAll('.containerswipe');
+             containerswipes.forEach(container => {
+                 container.style.zIndex = 1;
+             });
+ 
+             const containerswipes2 = document.querySelectorAll('.containerswipe2');
+             containerswipes2.forEach(container => {
+                 container.style.zIndex = 1;
+             });
+ 
+             const foodItems = document.querySelectorAll('.food-item');
+             foodItems.forEach(item => {
+                 item.style.zIndex = 1;
+             });
+         }
+ 
+         function hideCart() {
+             const cart = document.querySelector('.cart')
+             cart.style.display = 'none'
+ 
+             const containerswipes = document.querySelectorAll('.containerswipe');
+             containerswipes.forEach(container => {
+                 container.style.zIndex = 1;
+             });
+ 
+             const containerswipes2 = document.querySelectorAll('.containerswipe2');
+             containerswipes2.forEach(container => {
+                 container.style.zIndex = 1;
+             });
+ 
+             const foodItems = document.querySelectorAll('.food-item');
+             foodItems.forEach(item => {
+                 item.style.zIndex = 1;
+             });
+         }
+ 
+         function showCheckOut() {
+             const checkout = document.querySelector('.checkOut');
+             const orderSummary = document.getElementById('orderSummary');
+             const totalQuantity = document.querySelector('.totalQuantity');
+             const totalPrice = document.querySelector('.totalPrice');
+ 
+             // Retrieve cart from localStorage
+             const cart = JSON.parse(localStorage.getItem('cart')) || [];
+             const total = parseFloat(localStorage.getItem('total')) || 0;
+ 
+             // Clear previous order summary
+             orderSummary.innerHTML = '';
+ 
+             // Populate order summary with cart items
+             cart.forEach(item => {
+                 const row = document.createElement('div');
+                 row.classList.add('row');
+                 row.innerHTML = `
+                 <div class="name">${item.name}</div>
+                 <div class="price">Rs. ${item.price} x ${item.quantity}</div>
+             `;
+                 orderSummary.appendChild(row);
+             });
+ 
+             // Update total quantity and price
+             totalQuantity.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+             totalPrice.textContent = `Rs. ${total.toFixed(2)}`;
+ 
+             // Show checkout and disable scrolling
+             checkout.style.display = 'flex';
+             document.body.classList.add('no-scroll');
+         }
+ 
+         function hideCheckOut() {
+             const checkout = document.querySelector('.checkOut');
+             checkout.style.display = 'none';
+             document.body.classList.remove('no-scroll');
+         }
+ 
+         function openPopup(popupId) {
+             const popup = document.getElementById(popupId);
+             popup.style.display = 'flex';
+             popup.classList.add("open-popup");
+         }
+ 
+         function closePopup(popupId) {
+             const popup = document.getElementById(popupId);
+             popup.classList.remove("open-popup");
+         }
+ 
+         function openReserve(id) {
+             document.getElementById(id).classList.remove('hidden');
+             document.getElementById(id).style.display = 'flex';
+             document.getElementById(id).classList.add("open-reserve");
+         }
+ 
+         function closeReserve(id) {
+             document.getElementById(id).classList.add('hidden');
+             document.querySelector('form').reset();
+             document.getElementById(id).classList.remove("open-reserve");
+         }
+ 
+ 
+         document.addEventListener('DOMContentLoaded', function () {
+             const form = document.querySelector('.form');
+             const creditCardDetails = document.querySelector('.creditCardDetails');
+             const mainPaymentMethodSelect = document.getElementById('paymentMethod');
+             const creditCardPaymentMethodSelect = creditCardDetails.querySelector('#paymentMethod');
+ 
+             function toggleForms(paymentMethod) {
+                 if (paymentMethod === 'creditCard') {
+                     form.style.display = 'none';
+                     creditCardDetails.classList.remove('hidden');
+                     creditCardDetails.style.display = 'flex';
+                 } else {
+                     form.style.display = 'flex';
+                     creditCardDetails.classList.add('hidden');
+                     creditCardDetails.style.display = 'none';
+                 }
+ 
+             }
+ 
+             mainPaymentMethodSelect.addEventListener('change', function () {
+                 toggleForms(this.value);
+             });
+ 
+             creditCardPaymentMethodSelect.addEventListener('change', function () {
+                 toggleForms(this.value);
+             });
+         });
+     </script>
+ 
+</body>
+
+</html>
