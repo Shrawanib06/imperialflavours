@@ -784,7 +784,183 @@ footer {
     padding-top: 5px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 280px) {
+
+    nav {
+        background-color: #03162a;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 53px;
+    }
+
+    .left {
+        font-size: 20px;
+        font-weight: 500;
+        background: linear-gradient(to right, #4d4d4d, #a0a0a0, #d8d8d8, #a0a0a0, #4d4d4d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        font-family: "Dancing Script", cursive;
+    }
+
+    .cart {
+        width: 239px;
+    }
+
+    .cart-button {
+        list-style: none;
+        width: 10px;
+        margin-right: 17px;
+    }
+
+    .menu-button a svg {
+        width: 19px;
+        margin-right: 7px;
+    }
+
+    .cart-button .quantity {
+        top: 10px;
+        left: 95%;
+        padding: 1px 4px;
+        font-size: 8px;
+    }
+
+    .cart-button i {
+        font-size: 22px;
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+
+    .text {
+        margin-top: -8px;
+        font-size: 11px;
+        font-weight: 500;
+        padding: 0 25px;
+    }
+
+    .booking-details form {
+        width: 220px;
+    }
+
+    .input-box .input-field {
+        width: 90%;
+    }
+
+    .reserve {
+        width: 152px;
+    }
+
+    footer {
+        font-family: "Poppins", sans-serif;
+        margin-top: 65px;
+    }
+
+    .foot-panel2 {
+        background-color: #4d4d4d;
+        color: white;
+        height: 776px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mobile {
+        font-size: 10px;
+    }
+
+    .checkOut {
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+    }
+
+    .checkOut .container {
+        padding: 20px;
+        max-height: 90%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+        width: 72%;
+        max-width: 302px;
+    }
+
+    .checkoutLayout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 8px;
+        gap: 20px;
+    }
+
+    .checkoutLayout .returnCart {
+        width: 225px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .checkoutLayout .right {
+        width: 204px;
+        height: 462px;
+    }
+
+    .checkoutLayout .right .form {
+        width: 200px;
+    }
+
+    .checkoutLayout .form input {
+        width: 157px;
+    }
+
+    .popup {
+        width: 190px;
+        height: 156px;
+    }
+
+    .right h1 {
+        margin-bottom: 5px;
+    }
+
+    .return {
+        margin-top: 0px;
+        width: 200px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .return .custom-hr {
+        margin: 14px 0;
+        width: 198px;
+    }
+
+    .returnCart h1 {
+        font-size: 28px;
+        margin: 10px 0;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .hideOnComputer {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 375px) and (min-width: 281px) {
     nav {
         display: flex;
         justify-content: space-evenly;
@@ -926,6 +1102,644 @@ footer {
 
     .menu-button {
         display: block;
+    }
+
+}
+
+
+@media screen and (max-width: 414px) and (min-width: 376px) {
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 70px;
+        background-color: #03162a;
+        font-family: "Poppins", sans-serif;
+        position: sticky;
+    }
+
+    .left {
+        color: white;
+        font-size: 30px;
+        font-weight: 500;
+        background: linear-gradient(to right, #4d4d4d, #a0a0a0, #d8d8d8, #a0a0a0, #4d4d4d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        font-family: "Dancing Script", cursive;
+    }
+
+    .cart-button .quantity {
+        top: 9px;
+        left: 94%;
+        padding: 2px 8px;
+        font-size: 10px;
+    }
+
+    .custom-hr {
+        margin: 20px 38px;
+    }
+
+    footer {
+        font-family: "Poppins", sans-serif;
+        margin-top: 65px;
+    }
+
+    .foot-panel2 {
+        background-color: #4d4d4d;
+        color: white;
+        height: 776px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text {
+        font-size: 13px;
+        padding: 0px 34px;
+    }
+
+    form .input-box {
+        width: 79vw;
+    }
+
+    .booking-details form {
+        width: 295px;
+    }
+
+    .input-box .input-field {
+        width: 70%;
+    }
+
+    .reserve {
+        width: 262px;
+        height: 169px;
+    }
+
+    .checkOut {
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+    }
+
+    .checkOut .container {
+        padding: 20px;
+        max-height: 90%;
+        overflow-y: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+        width: 90%;
+        max-width: 302px;
+    }
+
+    .checkoutLayout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 8px;
+        gap: 20px;
+    }
+
+    .checkoutLayout .returnCart {
+        width: 225px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+    .checkoutLayout .right {
+        width: 291px;
+        height: 450px;
+    }
+
+    .popup {
+        width: 244px;
+        height: 156px;
+    }
+
+    .right h1 {
+        margin-bottom: 5px;
+    }
+
+    .return {
+        margin-top: 0px;
+        width: 282px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .return .custom-hr {
+        margin: 14px 0;
+        width: 280px;
+    }
+
+    .returnCart h1 {
+        font-size: 28px;
+        margin: 10px 0;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 540px) and (min-width: 415px) {
+
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 70px;
+        background-color: #03162a;
+        font-family: "Poppins", sans-serif;
+        position: sticky;
+    }
+
+    .left {
+        color: white;
+        font-size: 30px;
+        font-weight: 500;
+        background: linear-gradient(to right, #4d4d4d, #a0a0a0, #d8d8d8, #a0a0a0, #4d4d4d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        font-family: "Dancing Script", cursive;
+    }
+
+    .cart-button .quantity {
+        top: 9px;
+        left: 90%;
+        padding: 2px 8px;
+        font-size: 10px;
+    }
+
+    .text {
+        padding: 0px 34px;
+    }
+
+    .booking-details form {
+        width: 469px;
+    }
+
+    .input-box .input-field {
+        width: 90%;
+    }
+
+    footer {
+        font-family: "Poppins", sans-serif;
+        margin-top: 65px;
+    }
+
+    .foot-panel2 {
+        background-color: #4d4d4d;
+        color: white;
+        height: 776px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mobile {
+        font-size: 13px;
+    }
+
+    .checkOut {
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+    }
+
+    .checkOut .container {
+        padding: 20px;
+        max-height: 90%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+        width: 90%;
+        max-width: 302px;
+    }
+
+    .checkoutLayout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 8px;
+        gap: 20px;
+    }
+
+    .checkoutLayout .returnCart {
+        width: 225px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .checkoutLayout .right {
+        width: 291px;
+        height: 450px;
+    }
+
+    .popup {
+        width: 244px;
+        height: 156px;
+    }
+
+    .right h1 {
+        margin-bottom: 5px;
+    }
+
+    .return {
+        margin-top: 0px;
+        width: 282px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .return .custom-hr {
+        margin: 14px 0;
+        width: 280px;
+    }
+
+    .returnCart h1 {
+        font-size: 28px;
+        margin: 10px 0;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .hideOnComputer {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 768px) and (min-width: 541px) {
+
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 70px;
+        background-color: #03162a;
+        font-family: "Poppins", sans-serif;
+        position: sticky;
+    }
+
+    .left {
+        color: white;
+        font-size: 30px;
+        font-weight: 500;
+        background: linear-gradient(to right, #4d4d4d, #a0a0a0, #d8d8d8, #a0a0a0, #4d4d4d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        font-family: "Dancing Script", cursive;
+    }
+
+    .cart-button .quantity {
+        top: 9px;
+        left: 96%;
+        padding: 2px 8px;
+        font-size: 10px;
+    }
+
+    .booking-details {
+        min-height: 47vh;
+    }
+
+    .booking-details form {
+        width: 768px;
+    }
+
+    .input-box .input-field {
+        width: 80%;
+    }
+
+    .foot-panel2 ul {
+        margin: 20px 36px;
+    }
+
+    .foot-panel2 {
+        height: 399px;
+    }
+
+    .mobile {
+        font-size: 13px;
+    }
+
+    .checkOut .container {
+        width: 80%;
+        height: 45%;
+    }
+
+    .hideOnMobile {
+        display: flex;
+    }
+
+    .hideOnComputer {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 820px) and (min-width: 769px) {
+
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 70px;
+        background-color: #03162a;
+        font-family: "Poppins", sans-serif;
+        position: sticky;
+    }
+
+    .left {
+        color: white;
+        font-size: 30px;
+        font-weight: 500;
+        background: linear-gradient(to right, #4d4d4d, #a0a0a0, #d8d8d8, #a0a0a0, #4d4d4d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        font-family: "Dancing Script", cursive;
+    }
+
+    .cart-button .quantity {
+        top: 9px;
+        left: 95%;
+        padding: 2px 8px;
+        font-size: 10px;
+    }
+
+    .booking-details {
+        min-height: 47vh;
+    }
+
+    .booking-details form {
+        width: 814px;
+    }
+
+    .input-box .input-field {
+        width: 80%;
+    }
+
+    .foot-panel2 ul {
+        margin: 20px 36px;
+    }
+
+    .foot-panel2 {
+        height: 399px;
+    }
+
+    .mobile {
+        font-size: 13px;
+    }
+
+    .checkOut .container {
+        width: 80%;
+        height: 45%;
+    }
+
+    .hideOnMobile {
+        display: flex;
+    }
+
+    .hideOnComputer {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 912px) and (min-width: 821px) {
+
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 70px;
+        background-color: #03162a;
+        font-family: "Poppins", sans-serif;
+        position: sticky;
+    }
+
+    .left {
+        color: white;
+        font-size: 30px;
+        font-weight: 500;
+        background: linear-gradient(to right, #4d4d4d, #a0a0a0, #d8d8d8, #a0a0a0, #4d4d4d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        font-family: "Dancing Script", cursive;
+    }
+
+    .cart-button .quantity {
+        top: 9px;
+        left: 93%;
+        padding: 2px 8px;
+        font-size: 10px;
+    }
+
+    .booking-details {
+        min-height: 47vh;
+    }
+
+    .booking-details form {
+        width: 814px;
+    }
+
+    .input-box .input-field {
+        width: 80%;
+    }
+
+    .foot-panel2 ul {
+        margin: 20px 36px;
+    }
+
+    .foot-panel2 {
+        height: 399px;
+    }
+
+    .mobile {
+        font-size: 13px;
+    }
+
+    .checkOut .container {
+        width: 80%;
+        height: 45%;
+    }
+
+    .hideOnMobile {
+        display: flex;
+    }
+
+    .hideOnComputer {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1024px) and (min-width: 913px) {
+
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 70px;
+        background-color: #03162a;
+        font-family: "Poppins", sans-serif;
+        position: sticky;
+    }
+
+    .left {
+        color: white;
+        font-size: 30px;
+        font-weight: 500;
+        background: linear-gradient(to right, #4d4d4d, #a0a0a0, #d8d8d8, #a0a0a0, #4d4d4d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        font-family: "Dancing Script", cursive;
+    }
+
+    .cart-button .quantity {
+        top: 9px;
+        left: 91%;
+        padding: 2px 8px;
+        font-size: 10px;
+    }
+
+    .booking-details {
+        min-height: 47vh;
+    }
+
+    .booking-details form {
+        width: 814px;
+    }
+
+    .input-box .input-field {
+        width: 80%;
+    }
+
+    .foot-panel2 ul {
+        margin: 20px 36px;
+    }
+
+    .foot-panel2 {
+        height: 399px;
+    }
+
+    .mobile {
+        font-size: 13px;
+    }
+
+    .checkOut .container {
+        width: 80%;
+        height: 45%;
+    }
+
+    .hideOnMobile {
+        display: flex;
+    }
+
+    .hideOnComputer {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1280px) and (min-width: 1025px) {
+
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 70px;
+        background-color: #03162a;
+        font-family: "Poppins", sans-serif;
+        position: sticky;
+    }
+
+    .left {
+        color: white;
+        font-size: 30px;
+        font-weight: 500;
+        background: linear-gradient(to right, #4d4d4d, #a0a0a0, #d8d8d8, #a0a0a0, #4d4d4d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        font-family: "Dancing Script", cursive;
+    }
+
+    .cart-button .quantity {
+        top: 9px;
+        left: 88%;
+        padding: 2px 8px;
+        font-size: 10px;
+    }
+
+    .booking-details {
+        min-height: 47vh;
+    }
+
+    .booking-details form {
+        width: 814px;
+    }
+
+    .input-box .input-field {
+        width: 80%;
+    }
+
+    .foot-panel2 ul {
+        margin: 20px 36px;
+    }
+
+    .foot-panel2 {
+        height: 399px;
+    }
+
+    .mobile {
+        font-size: 13px;
+    }
+
+    .checkOut .container {
+        width: 80%;
+        height: 45%;
+    }
+
+    .hideOnMobile {
+        display: flex;
+    }
+
+    .hideOnComputer {
+        display: none;
     }
 
 }
